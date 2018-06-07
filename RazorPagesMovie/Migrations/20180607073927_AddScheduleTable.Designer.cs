@@ -11,9 +11,10 @@ using System;
 namespace RazorPagesMovie.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    partial class MovieContextModelSnapshot : ModelSnapshot
+    [Migration("20180607073927_AddScheduleTable")]
+    partial class AddScheduleTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -63,7 +64,7 @@ namespace RazorPagesMovie.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Schedules");
+                    b.ToTable("Schedule");
                 });
 #pragma warning restore 612, 618
         }
